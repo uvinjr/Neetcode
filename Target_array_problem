@@ -1,0 +1,27 @@
+n=int(input())
+arr=list(map(int,input().split()))
+target=int(input())
+
+count=0
+sum=0
+
+for i in range(n):
+    if arr[i]<target:
+        count+=1
+
+    else:
+        sum+=count
+
+print(sum)
+        
+#############################################
+Input:
+6
+100 150 200 150 170 200
+200
+
+Output: 6 (Here we took the input to array manually)
+
+Logic:
+  count always increases. we need to update sum each time -> element in the array = target given
+  Hence for given qn at end, count=4 and sum=6(2+4, 2 when it reaches index 2 and 4 when index reaches 5)####
